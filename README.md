@@ -4,7 +4,7 @@ A collection of useful commands, snippets, and reference links used in the avera
 Please note these are only based on my personal experiences. 
 These commands are intended to be used as reference material, for the purposes of refreshing your memory. If you don't know what a command does, don't run it until you've looked it up and understand what it does.
 
-Please also feel free to check out my Administrator's Cookbook.
+Please also feel free to check out my [Administrator's Cookbook](https://github.com/liaocanada/Administrators-Cookbook).
 
 ## Table of Contents
 1. [Git](#git)
@@ -12,13 +12,15 @@ Please also feel free to check out my Administrator's Cookbook.
 3. [Java](#java)
 
 ## Git
-| Action                    | Command                                                                                                                                                        | Description |
-|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| Make a commit             | `git add .`<br/> `git commit -m "<commit-message>"`<br/> `git pull`<br/> `git push`                                                                            |             |
-| Switch branches           | `git branch`<br/> `git checkout <existing-local-branch>`<br/> `git checkout -b <new-local-branch>`<br/> `git checkout --track origin/<existing-remote-branch>` |             |
-| Stash uncommitted changes | `git stash`<br/> <i>(switch branches)</i><br/> `git stash apply`                                                                                               |             |
-| Undo a commit             | `git reset --soft HEAD~1`<br/> <i>(or)</i><br/> `git reset --hard HEAD~1`                                                                                      |             |
-| Add a remote              | `git remote add origin https://github.com/<username>/<repo-name>.git`<br/> <i>(make a commit)</i><br/> `git push --set-upstream origin master`                  |             |
+| Action                         | Command                                                                                                                                                              | Description |
+|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| Make a commit                  | `git add .`<br/> `git commit -m "<commit-message>"`<br/> `git pull`<br/> `git push`                                                                                  |             |
+| Switch branches                | `git branch`<br/> `git checkout <existing-local-branch>`<br/> `git checkout -b <new-local-branch>`<br/> `git checkout --track origin/<existing-remote-branch>`       |             |
+| Stash uncommitted changes      | `git stash`<br/> <i>(switch branches)</i><br/> `git stash apply`                                                                                                     |             |
+| Undo a commit                  | `git reset --soft HEAD~1`<br/> <i>(or)</i><br/> `git reset --hard HEAD~1`                                                                                            |             |
+| Add a remote                   | `git remote add origin https://github.com/<username>/<repo-name>.git<br/> <i>(make a commit)</i><br/> `git push --set-upstream origin master`                        |             |
+| Rename a branch (local+remote) | `git checkout <old-branch-name>`<br/> `git branch -m <new-branch-name>`<br/> `git push origin --delete <old-branch-name>`<br/> `git push origin -u <new-branch-new>` |             |
+| Delete a branch (local+remote) | `git push origin --delete <remote-branch-name>`<br/> `git branch -d <local-branch-name>`                                                                             |             |
 
 
 ## Node

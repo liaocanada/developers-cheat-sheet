@@ -10,6 +10,7 @@ Please also feel free to check out my [Administrator's Cookbook](https://github.
 1. [Git](#git)
 2. [Node](#node)
 3. [Java](#java)
+4. [AWS](#AWS)
 
 ## Git
 | Action                         | Command                                                                                                                                                               | Description |
@@ -42,3 +43,8 @@ Please also feel free to check out my [Administrator's Cookbook](https://github.
 |-------------------|------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Run a program     | <i>(Download Java and set PATH variable)</i><br/>`javac <Java-file>.java`<br/> `java <Java-file>`<br/> `java <Java-file> <arg0> <arg1> <arg2>` |             |
 | Generate Javadocs | `javadoc -d <Javadoc-destination-path> <Java-file>.java`                                                                                       |             |
+
+## AWS
+| Action                                              | Code                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Description |
+|-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| Start a Lambda function compatible with API Gateway | `exports.handler = async (event, context, callback) => {`<br/> &emsp;`const hasError = event['queryStringParameters']['myErrorParam'];`<br/> &emsp;`if (hasError === 'yes') {`<br/> &emsp;&emsp;`callback(new Error('My error message'));`<br/> &emsp;`else {`<br/> &emsp;&emsp;`const response = {`<br/> &emsp;&emsp;&emsp;`statusCode: 200,`<br/> &emsp;&emsp;&emsp;`headers: {"Access-Control-Allow-Origin": "*"},`<br/> &emsp;&emsp;&emsp;`body: JSON.stringify({success: true}),`<br/> &emsp;&emsp;&emsp;`isBase64Encoded: false`<br/> &emsp;&emsp;`}`<br/> &emsp;&emsp;`callback(null, response);`<br/> `}` |             |

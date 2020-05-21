@@ -1,10 +1,11 @@
 ## Git Commands and Snippets
-| Action                         | Command(s)                                                                                                                                                         |
-|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Make a commit                  | `git add .`<br/>`git commit -m "<commit-message>"`<br/>`git pull`<br/>`git push`                                                                                   |
-| Switch branches                | `git branch`<br/>`git checkout <existing-local-branch>`<br/>`git checkout -b <new-local-branch>`<br/>`git checkout --track origin/<existing-remote-branch>`        |
-| Stash uncommitted changes      | `git stash`<br/>`git stash push -m "<stash-name>"`<br/><i>(switch branches)</i><br/>`git stash apply`<br/>`git stash list`<br/>`git stash apply stash@{1}`         |
-| Undo a commit                  | `git reset --soft HEAD~1`<br/>`git reset --hard HEAD~1`                                                                                                            |
-| Add a remote                   | `git remote add origin https://github.com/<username>/<repo-name>.git`<br/><i>(make a commit)</i><br/>`git push --set-upstream origin master`                       |
-| Rename a branch (local+remote) | `git checkout <old-branch-name>`<br/>`git branch -m <new-branch-name>`<br/>`git push origin --delete <old-branch-name>`<br/>`git push origin -u <new-branch-name>` |
-| Delete a branch (local+remote) | `git push origin --delete <remote-branch-name>`<br/>`git branch -d <local-branch-name>`                                                                            |
+| Action                         | Command(s)                                                                                                                                                                                         |
+|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Make a commit                  | `git add .`<br/>`git commit -m "<commit-message>"`<br/>`git pull`<br/>`git push`                                                                                                                   |
+| Switch branches                | `git branch`<br/>`git checkout <existing-local-branch>`<br/>`git checkout -b <new-local-branch>`<br/>`git checkout --track origin/<existing-remote-branch>`                                        |
+| Stash uncommitted changes      | `git stash`<br/>`git stash push -m "<stash-name>"`<br/><i>(Switch branches)</i><br/>`git stash apply`<br/>`git stash list`<br/>`git stash apply stash@{1}`                                         |
+| Undo a commit                  | `git reset --soft HEAD~1`<br/>`git reset --hard HEAD~1`                                                                                                                                            |
+| Add a remote                   | `git remote add origin https://github.com/<username>/<repo-name>.git`<br/><i>(Make a commit)</i><br/>`git push --set-upstream origin master`                                                       |
+| Rename a branch (local+remote) | `git checkout <old-branch-name>`<br/>`git branch -m <new-branch-name>`<br/>`git push origin --delete <old-branch-name>`<br/>`git push origin -u <new-branch-name>`                                 |
+| Delete a branch (local+remote) | `git push origin --delete <remote-branch-name>`<br/>`git branch -d <local-branch-name>`                                                                                                            |
+| Reset git credentials          | <i>(For Mac)</i><br/>`git config --global credential.helper osxkeychain`<br/><i>(Credentials will be asked on next pull/push)</i><br/><i>(For Windows, reset from Windows Credentials Manager)</i> |

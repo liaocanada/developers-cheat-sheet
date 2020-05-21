@@ -1,3 +1,4 @@
+## Java Commands and Snippets
 | Action                                           | Command(s)                                                                                                             |
 |--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | Compile                                          | <i>(Add Java to system PATH variable)</i><br/>`javac <package>/<class>.java`                                           |

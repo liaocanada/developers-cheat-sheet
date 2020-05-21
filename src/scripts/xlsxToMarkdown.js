@@ -16,7 +16,8 @@ function xlsxToMarkdown(xlsxName) {
 
         // CSV to markdown table
         markdownTables.markdownTables(path.join(__dirname, `../csv/${xlsxName}.csv`)).then(res => {
-            fs.writeFileSync(path.join(__dirname, `../../tables/${xlsxName}.md`), res);
+            const toWrite = `## ${capitalize(xlsxName)} Commands and Snippets\r\n` + res;
+            fs.writeFileSync(path.join(__dirname, `../../tables/${xlsxName}.md`), toWrite);
         });
     });
 };
@@ -45,5 +46,9 @@ function processRow(row) {
     row['Command(s)'] = processedCommands.join('<br/>');
     return row;
 };
+
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
 module.exports = xlsxToMarkdown;

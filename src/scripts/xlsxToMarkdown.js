@@ -22,6 +22,9 @@ function xlsxToMarkdown(xlsxName) {
 };
 
 function processRow(row) {
+    // Escape pipe symbol
+    row['Command(s)'] = row['Command(s)'].replace(/\|/g, '\\|');
+
     if (row['Command(s)'].startsWith('(CODEBLOCK)')) {
         const tagRemoved = row['Command(s)'].substring('(CODEBLOCK)'.length);
         const lineBreaksReplaced = tagRemoved.replace(/\r\n/g, '<br/>');  // Replace all \r\n with br tag

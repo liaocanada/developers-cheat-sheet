@@ -1,10 +1,10 @@
-# Developer's Cookbook
+# Developer's Cheat Sheet
 A collection of useful commands, snippets, and reference links used in the average day of a developer. 
 
 Please note these are only based on my personal experiences. 
 These commands are intended to be used as reference material, for the purposes of refreshing your memory. If you don't know what a command does, don't run it until you've looked it up and understand what it does.
 
-Please also feel free to check out my [Administrator's Cookbook](https://github.com/liaocanada/Administrators-Cookbook).
+Please also feel free to check out my [Administrator's Cheat Sheet](https://github.com/liaocanada/administrators-cheat-sheet).
 
 ## Table of Contents
 1. [Git](#git)

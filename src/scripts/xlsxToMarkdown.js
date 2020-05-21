@@ -22,6 +22,14 @@ function xlsxToMarkdown(xlsxName) {
 };
 
 function processRow(row) {
+    if (row['Command(s)'].startsWith('(CODEBLOCK)')) {
+        const tagRemoved = row['Command(s)'].substring('(CODEBLOCK)'.length);
+        const lineBreaksReplaced = tagRemoved.replace(/\r\n/g, '<br/>');  // Replace all \r\n with br tag
+
+        row['Command(s)'] = '<pre>' + lineBreaksReplaced + '</pre>';
+        return row;
+    }
+
     const commands = row['Command(s)'].split('\r\n');
 
     const processedCommands = commands.map(command => {
